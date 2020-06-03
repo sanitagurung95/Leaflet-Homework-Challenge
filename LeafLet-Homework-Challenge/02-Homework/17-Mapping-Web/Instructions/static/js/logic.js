@@ -31,27 +31,20 @@ var myMap = L.map("map", {
 
 
 // make markers depending upon the magnitude
-
-function chooseColor(magnitude) {
-
-    if (magnitude[i].points > 5) {
-      color = "#ea2c2c";
-    }
-    else if (magnitude[i].points > 4) {
-      color = "#ea822c";
-    }
-    else if (magnitude[i].points > 3) {
-      color = "#ee9c00"
-    }
-    else if (magnitude[i].points > 2) {
-      color = "#eecc00"
-    }
-    else if (magnitude[i].points > 1) {
-      color = "#d4ee00"
-    }
-    else {
-      color = "98ee00"
-
+function markerColor(magnitude) {
+  if (magnitude < 5) {
+      return "#ea2c2c";
+  } else if (magnitude < 4) {
+      return "#ea822c";
+  } else if (magnitude < 3) {
+      return "#ee9c00";
+  } else if (magnitude < 2) {
+      return "#eecc00";
+  } else if (magnitude < 1) {
+      return #d4ee00";
+  } else {
+      return "98ee00";
+  };
 }
 
 // function to determine to increase the markersize for shaping our radius of the circle marker
