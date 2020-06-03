@@ -1,3 +1,9 @@
+// We create the tile layer that will be the background of our map.
+console.log("working");
+
+var apiKey = "pk.eyJ1IjoiZ3VydW5nc2FuaXRhIiwiYSI6ImNrOXpzOHY4aTBlZmMzbXA2eGt3bmNkMHkifQ.PfwVSlLKYR3phbvcBstUZw";
+
+
 // Create a map object
 var myMap = L.map("map", {
     center: [37.09, -95.71],
