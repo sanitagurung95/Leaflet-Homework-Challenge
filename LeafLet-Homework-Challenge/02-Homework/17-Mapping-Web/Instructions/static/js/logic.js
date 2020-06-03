@@ -29,22 +29,22 @@ var myMap = L.map("map", {
 function chooseColor(magnitude) {
 
     if (magnitude[i].points > 5) {
-      color = "red";
+      color = "#ea2c2c";
     }
     else if (magnitude[i].points > 4) {
-      color = "orange";
+      color = "#ea822c";
     }
     else if (magnitude[i].points > 3) {
-      color = "gold"
+      color = "#ee9c00"
     }
     else if (magnitude[i].points > 2) {
-      color = "yellow"
+      color = "#eecc00"
     }
     else if (magnitude[i].points > 1) {
-      color = "yellowgreen"
+      color = "#d4ee00"
     }
     else {
-      color = "lightgreen"
+      color = "98ee00"
 
 }
 
@@ -88,6 +88,15 @@ d3.json(queryUrl, function(data) {
   var div = L.DomUtil.create("div", "info legend");
   
   var grades = [0, 1, 2, 3, 4, 5];
+      var colors = [
+      "#98ee00",
+      "#d4ee00",
+      "#eecc00",
+      "#ee9c00",
+      "#ea822c",
+      "#ea2c2c"
+    ];
+
 
   for (var i = 0; i < grades.length; i++) {
     div.innerHTML += '<i style="background:' + chooseColor(grades[i] + 1) + '"></i> ' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
